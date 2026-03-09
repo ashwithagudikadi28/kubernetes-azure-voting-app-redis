@@ -39,7 +39,7 @@ kind: Deployment
 metadata:
   name: azure-vote-front
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: azure-vote-front
@@ -47,7 +47,7 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
-  minReadySeconds: 5
+  minReadySeconds: 5 
   template:
     metadata:
       labels:
